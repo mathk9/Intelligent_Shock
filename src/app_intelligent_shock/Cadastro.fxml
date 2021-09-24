@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="465.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_intelligent_shock.CadastroController">
+   <children>
+      <BorderPane layoutX="-4.0" prefHeight="543.0" prefWidth="902.0">
+         <right>
+            <Pane prefHeight="520.0" prefWidth="389.0" styleClass="linear-grad" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="TOP_RIGHT" layoutX="292.0" layoutY="-1.0" prefHeight="31.0" prefWidth="97.0" spacing="5.0">
+                     <children>
+                        <Button fx:id="btn_Minimaze" mnemonicParsing="false" onAction="#btnMinAction" prefHeight="23.0" prefWidth="32.0" text="_" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bg_color" />
+                              <String fx:value="btnMinimaze" />
+                           </styleClass>
+                           <stylesheets>
+                              <URL value="@../../../JavaFX_Dashboard/src/dashboard_login/Style.css" />
+                              <URL value="@Style3.css" />
+                           </stylesheets>
+                        </Button>
+                        <Button fx:id="btn_Close" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="32.0" stylesheets="@Style3.css" text="X" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="bg_color" />
+                              <String fx:value="btnClose" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="192.0" fitWidth="373.0" layoutX="8.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Img/smartSocket-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </right>
+         <left>
+            <Pane prefHeight="543.0" prefWidth="510.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Hyperlink fx:id="btnCancelar" layoutX="194.0" layoutY="475.0" onAction="#handleBtnCancelar" text="Cancelar">
+                     <font>
+                        <Font name="Microsoft Tai Le" size="18.0" />
+                     </font>
+                  </Hyperlink>
+                  <Button fx:id="btnCadastar" layoutX="159.0" layoutY="397.0" mnemonicParsing="false" onAction="#handleBtnCadastrar" prefHeight="50.0" prefWidth="150.0" style="-fx-background-radius: 15;" styleClass="btnLogar" stylesheets="@style.css" text="Cadastrar">
+                     <font>
+                        <Font name="Microsoft Tai Le" size="24.0" />
+                     </font>
+                  </Button>
+                  <PasswordField layoutX="84.0" layoutY="335.0" prefHeight="35.0" prefWidth="300.0" promptText="Confirmar Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <TextField layoutX="84.0" layoutY="149.0" prefHeight="35.0" prefWidth="300.0" promptText="Usuário" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <Label alignment="CENTER" layoutX="42.0" layoutY="44.0" minWidth="60.0" prefHeight="27.0" prefWidth="384.0" style="&#10;" text="Intelligent Shock" textAlignment="CENTER">
+                     <font>
+                        <Font name="Microsoft Tai Le" size="42.0" fx:id="x1" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="84.0" layoutY="210.0" prefHeight="35.0" prefWidth="300.0" promptText="E-mail" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <PasswordField layoutX="84.0" layoutY="272.0" prefHeight="35.0" prefWidth="300.0" promptText="Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+               </children>
+            </Pane>
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>

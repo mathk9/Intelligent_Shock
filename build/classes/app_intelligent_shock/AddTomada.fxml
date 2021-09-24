@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" styleClass="linear-grad-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_intelligent_shock.AddTomadaController">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="70.0" prefWidth="1608.0" style="-fx-background-color: rgba(164,164,164,0.68);">
+         <children>
+            <HBox layoutX="-1.0" layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1474.0" spacing="70.0" style="-fx-background-radius: 5;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-radius: 100%;" textFill="#030303">
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1330.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#handleBtn_MeuConsumoAction" prefHeight="13.0" prefWidth="250.0" styleClass="btnMenu" stylesheets="@style2.css" text="Meu Cunsumo">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#handleBtn_TomadasAction" prefHeight="13.0" prefWidth="250.0" styleClass="btnMenu" stylesheets="@style2.css" text="Minhas Tomadas">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="13.0" prefWidth="250.0" style="-fx-background-color: #D9D9D9;" styleClass="btnMenu" stylesheets="@style2.css" text="Adicionar Tomada">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" top="28.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" layoutX="1525.0" prefHeight="43.0" prefWidth="83.0" spacing="5.0">
+               <children>
+                  <Button fx:id="btn_Minimaze" mnemonicParsing="false" onAction="#btnMinAction" prefHeight="23.0" prefWidth="32.0" text="_" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="bg_color" />
+                        <String fx:value="btnMinimaze" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@../../../JavaFX_Dashboard/src/dashboard_login/Style.css" />
+                        <URL value="@Style3.css" />
+                     </stylesheets>
+                  </Button>
+                  <Button fx:id="btn_Close" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="32.0" stylesheets="@Style3.css" text="X" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="bg_color" />
+                        <String fx:value="btnClose" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <ImageView fitHeight="514.0" fitWidth="564.0" layoutX="547.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/qr-code.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="688.0" layoutY="767.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="233.0" styleClass="btnAdd" stylesheets="@style.css" text="Adicionar">
+         <font>
+            <Font name="Microsoft Tai Le Bold" size="28.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" styleClass="linear-grad-background" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_intelligent_shock.MeuConsumoController">
+     <children>
+      <ImageView fitHeight="509.0" fitWidth="889.0" layoutX="131.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/chart.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="462.0" fitWidth="786.0" layoutX="157.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Img/lineChart.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="1174.0" layoutY="196.0" prefHeight="509.0" prefWidth="308.0" spacing="20.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Televisão">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="42.0" text="Sala de estar" textFill="#707070">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="104.0" style="-fx-background-color: #206074;" text="+70" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane layoutX="161.0" layoutY="13.0" prefHeight="80.0" prefWidth="133.0" style="-fx-border-color: #c5c5c5;">
+                     <children>
+                        <SVGPath content="M1444.878,1625.857c31.644-33.462,35.065-18.125,35.065-18.125s14.539,22.308,17.96,11.154,4.276-41.827,11.973-30.673,19.67,26.491,20.526,19.52,6.842-23.7,11.118-11.154" fill="TRANSPARENT" layoutX="-1427.0" layoutY="-1566.0" stroke="BLACK" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="101.0" layoutY="109.0" text="200">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Video Game">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="42.0" text="Quarto" textFill="#707070">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="104.0" style="-fx-background-color: #206074;" text="+70" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane layoutX="161.0" layoutY="13.0" prefHeight="80.0" prefWidth="133.0" style="-fx-border-color: #c5c5c5;">
+                     <children>
+                        <SVGPath content="M1437.878,1778.559c15.041-5.628,8.608,9.649,19.865,4.02s15.277-8.845,19.3,0,13.669-32.966,18.493-19.3,4.02,24.121,12.061,15.277,10.453-10.453,15.277-5.628,12.865-4.02,12.865-4.02" fill="#cc1b1b00" layoutX="-1420.0" layoutY="-1733.0" stroke="BLACK" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="103.0" layoutY="109.0" text="70">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffff;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Geladeira">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="42.0" text="Cozinha" textFill="#707070">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="106.0" style="-fx-background-color: #206074;" text="+70" textFill="WHITE">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <Pane layoutX="161.0" layoutY="13.0" prefHeight="80.0" prefWidth="133.0" style="-fx-border-color: #c5c5c5;">
+                     <children>
+                        <SVGPath content="M1442.642,1934c18.493-2.412,17.512-13.121,22.337-3.472,4.762,9.523-1.842,25.716,8.356,18.161-.1.074,3.569-2.78,3.7-2.885,10.17-7.823,8.141-13.3,11.219-4.906-.025-.069,2.363,4.667,2.45,4.906,3.216,8.845,12.061-9.649,16.081,0s5.376-4.758,15.025,6.5" fill="TRANSPARENT" layoutX="-1416.0" layoutY="-1900.0" stroke="BLACK" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="113.0" layoutY="111.0" text="750">
+                     <font>
+                        <Font name="Corbel Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+      <Pane prefHeight="70.0" prefWidth="1600.0" style="-fx-background-color: rgba(164,164,164,0.68);">
+         <children>
+            <HBox layoutX="-1.0" layoutY="-5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1600.0" spacing="70.0" style="-fx-background-radius: 5;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="75.0" style="-fx-background-radius: 100%;" textFill="#030303">
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1330.0" spacing="30.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="13.0" prefWidth="250.0" style="-fx-background-color: #D9D9D9;" styleClass="btnMenu" stylesheets="@style2.css" text="Meu Cunsumo">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_Tomadas" mnemonicParsing="false" onAction="#handleBtn_TomadasAction" prefHeight="13.0" prefWidth="250.0" styleClass="btnMenu" stylesheets="@style2.css" text="Minhas Tomadas">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btn_AddTomada" mnemonicParsing="false" onAction="#handleBtn_AddTomadaAction" prefHeight="13.0" prefWidth="250.0" styleClass="btnMenu" stylesheets="@style2.css" text="Adicionar Tomada">
+                           <effect>
+                              <ColorAdjust brightness="-0.4" />
+                           </effect>
+                           <font>
+                              <Font name="Microsoft Tai Le" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="20.0" top="28.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+      <HBox alignment="TOP_RIGHT" layoutX="1517.0" layoutY="2.0" prefHeight="43.0" prefWidth="83.0" spacing="5.0" AnchorPane.bottomAnchor="857.0" AnchorPane.leftAnchor="1517.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="btn_Minimaze" mnemonicParsing="false" onAction="#btnMinAction" prefHeight="23.0" prefWidth="32.0" text="_" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg_color" />
+                  <String fx:value="btnMinimaze" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@../../../JavaFX_Dashboard/src/dashboard_login/Style.css" />
+                  <URL value="@Style3.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="btn_Close" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="23.0" prefWidth="32.0" stylesheets="@Style3.css" text="X" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg_color" />
+                  <String fx:value="btnClose" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
