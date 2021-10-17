@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.LoadException;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -31,6 +32,9 @@ public class MinhasTomadasController implements Initializable {
     
     @FXML
     private Button btn_Minimaze;
+    
+    private Stage stage;
+    
     /**
      * Initializes the controller class.
      */
@@ -54,7 +58,7 @@ public class MinhasTomadasController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("AddTomada.fxml"));        
             Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();
@@ -70,7 +74,7 @@ public class MinhasTomadasController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MeuConsumo.fxml"));        
             Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();

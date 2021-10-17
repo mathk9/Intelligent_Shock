@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.LoadException;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -37,6 +38,9 @@ public class LoginController implements Initializable {
     /**
      * Initializes the controller class.
      */
+
+    private Stage stage;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -76,7 +80,7 @@ public class LoginController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));        
             Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();

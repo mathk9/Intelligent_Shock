@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="820.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_intelligent_shock.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="543.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_intelligent_shock.LoginController">
    <children>
-      <BorderPane prefHeight="520.0" prefWidth="820.0">
+      <BorderPane prefHeight="543.0" prefWidth="902.0">
          <left>
             <Pane prefHeight="520.0" prefWidth="430.0" BorderPane.alignment="CENTER">
                <children>
@@ -36,7 +36,7 @@
             </Pane>
          </left>
          <right>
-            <Pane prefHeight="520.0" prefWidth="389.0" styleClass="linear-grad" stylesheets="@style.css" BorderPane.alignment="CENTER">
+            <Pane prefHeight="558.0" prefWidth="400.0" styleClass="linear-grad" stylesheets="@style.css" BorderPane.alignment="CENTER">
                <children>
                   <HBox alignment="TOP_RIGHT" layoutX="292.0" layoutY="-1.0" prefHeight="31.0" prefWidth="97.0" spacing="5.0">
                      <children>

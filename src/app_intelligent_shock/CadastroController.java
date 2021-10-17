@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.fxml.LoadException;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -38,6 +39,8 @@ public class CadastroController implements Initializable {
     
     @FXML
     private Button btn_Minimaze;
+    
+    private Stage stage;
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -82,7 +85,7 @@ public class CadastroController implements Initializable {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));        
             Scene scene = new Scene(root);
-            Stage stage = new Stage();
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();
