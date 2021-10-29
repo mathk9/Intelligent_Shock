@@ -5,8 +5,12 @@
  */
 package app_intelligent_shock;
 
+import DAO.UsuarioDAO;
+import DTO.UsuarioDTO;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,8 +20,11 @@ import javafx.fxml.LoadException;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -35,6 +42,13 @@ public class LoginController implements Initializable {
     
     @FXML
     private Button btn_Minimaze;
+    
+    @FXML
+    private TextField txtLogin;
+    
+    @FXML
+    private TextField txtSenha;
+    
     /**
      * Initializes the controller class.
      */
@@ -62,16 +76,47 @@ public class LoginController implements Initializable {
     @FXML
     private void handleBtnLogar(ActionEvent event) throws IOException {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("MeuConsumo.fxml"));        
-            Scene scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.initStyle(StageStyle.TRANSPARENT);
-            stage.show();
-            closeButtonAction();
+            
+            UsuarioDTO objusuariodto = new UsuarioDTO();
+            
+            objusuariodto.setNome_usuario(txtLogin.getText());
+            objusuariodto.setSenha_usuario(txtSenha.getText());
+            
+            UsuarioDAO objusuariodao = new UsuarioDAO();
+            ResultSet rsusuariodao = objusuariodao.autenticacaoUsauario(objusuariodto);
+            
+            if (rsusuariodao.next()) {
+                Parent root = FXMLLoader.load(getClass().getResource("MeuConsumo.fxml"));        
+                Scene scene = new Scene(root);
+                Stage stage = new Stage();
+                stage.setScene(scene);
+                stage.initStyle(StageStyle.TRANSPARENT);
+                stage.show();
+                closeButtonAction();
+            } 
+            else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Falha");
+                alert.setHeaderText("Não foi possível logar");
+                alert.setContentText("Usuário ou Senha inválida");
+                alert.showAndWait().ifPresent(rs -> {
+                    if (rs == ButtonType.OK) {
+                        System.out.println("Pressed OK.");
+                    }
+                });
+            }            
+            
         }
-        catch(LoadException e) {
-            e.printStackTrace();
+        catch(Exception erro) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("ERRO");
+            alert.setHeaderText("Não foi possível acessar o banco de dados => LoginController");
+            alert.setContentText(erro.getMessage());
+            alert.showAndWait().ifPresent(rs -> {
+                if (rs == ButtonType.OK) {
+                    System.out.println("Pressed OK.");
+                }
+            });  
         }
     }
     

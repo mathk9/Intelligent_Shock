@@ -25,8 +25,8 @@
                         <Font name="Microsoft Tai Le Bold" size="28.0" />
                      </font>
                   </Button>
-                  <PasswordField layoutX="73.0" layoutY="199.0" prefHeight="35.0" prefWidth="300.0" promptText="Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
-                  <TextField layoutX="73.0" layoutY="141.0" prefHeight="35.0" prefWidth="300.0" promptText="Usuário" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <PasswordField fx:id="txtSenha" layoutX="73.0" layoutY="199.0" prefHeight="35.0" prefWidth="300.0" promptText="Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <TextField fx:id="txtLogin" layoutX="73.0" layoutY="141.0" prefHeight="35.0" prefWidth="300.0" promptText="Usuário" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
                   <Label alignment="CENTER" layoutX="31.0" layoutY="31.0" minWidth="60.0" prefHeight="27.0" prefWidth="384.0" style="&#10;" text="Intelligent Shock" textAlignment="CENTER">
                      <font>
                         <Font name="Microsoft Tai Le" size="42.0" fx:id="x1" />

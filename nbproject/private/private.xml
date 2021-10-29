@@ -3,10 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DAO/ConexaoDAO.java</file>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DTO/UsuarioDTO.java</file>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/App_Intelligent_Shock.java</file>
-            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/test/app_intelligent_shock/SampleJUnitTestTest.java</file>
-            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/MeuConsumoController.java</file>
-            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/SampleJUnitTest.java</file>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DAO/UsuarioDAO.java</file>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/LoginController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,0 +1,24 @@
+CREATE TABLE Usuario (
+    IdUsuario INT AUTO_INCREMENT PRIMARY key,
+    NomeUsuario VARCHAR(40),
+    Email VARCHAR(40),
+    Senha VARCHAR(20)
+);
+
+CREATE TABLE Tomada (
+    IdTomada INT AUTO_INCREMENT PRIMARY key,
+    NomeTomada VARCHAR(40),
+    LocalTomada VARCHAR(40)
+);
+
+CREATE TABLE Consumo (
+    IdConsumo INT AUTO_INCREMENT PRIMARY key,
+    Tarifa DECIMAL(6,2),
+    Potencia DECIMAL(6,2),
+    IdTomada INT NOT NULL,
+    CONSTRAINT FK_TomadaConsumo FOREIGN KEY (IdTomada)
+    REFERENCES Tomada(IdTomada),
+    IdUsuario INT NOT NULL,
+    CONSTRAINT FK_UsuarioConsumo FOREIGN KEY (IdUsuario)
+    REFERENCES Usuario(IdUsuario)
+);

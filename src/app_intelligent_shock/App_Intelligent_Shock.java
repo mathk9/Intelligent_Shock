@@ -16,7 +16,9 @@ import javafx.stage.StageStyle;
  *
  * @author mathn
  */
+
 public class App_Intelligent_Shock extends Application {
+    
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -39,7 +41,8 @@ public class App_Intelligent_Shock extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        launch(args);        
+        
     }
     
 }
