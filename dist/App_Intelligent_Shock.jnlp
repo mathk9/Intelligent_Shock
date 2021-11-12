@@ -8,9 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="App_Intelligent_Shock.jar" size="346182" download="eager" />
+    <jar href="App_Intelligent_Shock.jar" size="348002" download="eager" />
     <jar href="lib\mysql-connector-java-8.0.17.jar" size="2321813" download="eager" />
-    <jar href="lib\mysql-connector-java-8.0.25.jar" size="2428320" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="app_intelligent_shock.App_Intelligent_Shock"  name="App_Intelligent_Shock" />
   <update check="always"/>

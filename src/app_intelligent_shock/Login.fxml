@@ -38,7 +38,7 @@
          <right>
             <Pane prefHeight="558.0" prefWidth="400.0" styleClass="linear-grad" stylesheets="@style.css" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="TOP_RIGHT" layoutX="292.0" layoutY="-1.0" prefHeight="31.0" prefWidth="97.0" spacing="5.0">
+                  <HBox alignment="TOP_RIGHT" layoutX="303.0" layoutY="-1.0" prefHeight="31.0" prefWidth="97.0" spacing="5.0">
                      <children>
                         <Button fx:id="btn_Minimaze" mnemonicParsing="false" onAction="#btnMinAction" prefHeight="23.0" prefWidth="32.0" text="_" textAlignment="CENTER" textFill="WHITE">
                            <font>

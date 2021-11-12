@@ -27,7 +27,7 @@ public class UsuarioDAO {
         conn = new ConexaoDAO().conectaBD();
         try {
             
-            String sql = "select * from Usuario where NomeUsuario = ? and Senha = ?";
+            String sql = "SELECT * FROM Usuario WHERE NomeUsuario = ? AND Senha = ?";
             
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, objusuariodto.getNome_usuario());
@@ -52,4 +52,36 @@ public class UsuarioDAO {
         }
         
     }  
+    
+    public boolean cadastrarUsuario(UsuarioDTO objusuariodto) {
+        
+         conn = new ConexaoDAO().conectaBD();
+         
+         try {
+            String sql = "INSERT INTO Usuario (NomeUsuario, Email, Senha) VALUES (?, ?, ?)";
+            
+            PreparedStatement pstm = conn.prepareStatement(sql);
+            pstm.setString(1, objusuariodto.getNome_usuario());
+            pstm.setString(2, objusuariodto.getEmail());
+            pstm.setString(3, objusuariodto.getSenha_usuario());
+
+            
+            pstm.execute();
+            pstm.close();
+            return true;
+             
+        } catch (SQLException erro) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("ERRO");
+            alert.setHeaderText("Não foi possível acessar o banco de dados => UsuarioDAO");
+            alert.setContentText(erro.getMessage());
+            alert.showAndWait().ifPresent(rs -> {
+                if (rs == ButtonType.OK) {
+                    System.out.println("Pressed OK.");
+                }
+            });  
+            return false;            
+        }
+        
+    }
 }

@@ -5,9 +5,11 @@
         <group>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DAO/ConexaoDAO.java</file>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DTO/UsuarioDTO.java</file>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DTO/ConsumoDTO.java</file>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/App_Intelligent_Shock.java</file>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/DAO/UsuarioDAO.java</file>
             <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/LoginController.java</file>
+            <file>file:/D:/Usuários/Documentos/NetBeansProjects/App_Intelligent_Shock/src/app_intelligent_shock/CadastroController.java</file>
         </group>
     </open-files>
 </project-private>

@@ -24,7 +24,7 @@ public class ConexaoDAO {
         Connection conn = null;
         
         try {
-            String url = "jdbc:mysql://localhost:8085/intelligent_shock?user=root&password=";
+            String url = "jdbc:mysql://localhost:3306/intelligent_shock?user=root&password=";
             conn = DriverManager.getConnection(url);
             
         } catch (SQLException erro) {

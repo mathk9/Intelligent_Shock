@@ -13,7 +13,15 @@ package DTO;
 public class UsuarioDTO {
     
     private int id_usuario;
-    private String nome_usuario, senha_usuario;
+    private String nome_usuario, senha_usuario, Email;
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
 
     public int getId_usuario() {
         return id_usuario;
@@ -37,6 +45,7 @@ public class UsuarioDTO {
 
     public void setSenha_usuario(String senha_usuario) {
         this.senha_usuario = senha_usuario;
-    }    
-    
+    }
+
+
 }

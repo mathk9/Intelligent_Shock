@@ -61,15 +61,15 @@
                         <Font name="Microsoft Tai Le" size="24.0" />
                      </font>
                   </Button>
-                  <PasswordField layoutX="84.0" layoutY="335.0" prefHeight="35.0" prefWidth="300.0" promptText="Confirmar Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
-                  <TextField layoutX="84.0" layoutY="149.0" prefHeight="35.0" prefWidth="300.0" promptText="Usuário" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <PasswordField fx:id="txtConfSenha" layoutX="84.0" layoutY="335.0" prefHeight="35.0" prefWidth="300.0" promptText="Confirmar Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <TextField fx:id="txtUsuario" layoutX="84.0" layoutY="149.0" prefHeight="35.0" prefWidth="300.0" promptText="Usuário" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
                   <Label alignment="CENTER" layoutX="42.0" layoutY="44.0" minWidth="60.0" prefHeight="27.0" prefWidth="384.0" style="&#10;" text="Intelligent Shock" textAlignment="CENTER">
                      <font>
                         <Font name="Microsoft Tai Le" size="42.0" fx:id="x1" />
                      </font>
                   </Label>
-                  <TextField layoutX="84.0" layoutY="210.0" prefHeight="35.0" prefWidth="300.0" promptText="E-mail" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
-                  <PasswordField layoutX="84.0" layoutY="272.0" prefHeight="35.0" prefWidth="300.0" promptText="Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <TextField fx:id="txtEmail" layoutX="84.0" layoutY="210.0" prefHeight="35.0" prefWidth="300.0" promptText="E-mail" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
+                  <PasswordField fx:id="txtSenha" layoutX="84.0" layoutY="272.0" prefHeight="35.0" prefWidth="300.0" promptText="Senha" style="-fx-background-radius: 15;" styleClass="textField" stylesheets="@style.css" />
                </children>
             </Pane>
          </left>
