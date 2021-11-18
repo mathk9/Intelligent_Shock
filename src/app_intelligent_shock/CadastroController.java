@@ -73,7 +73,7 @@ public class CadastroController implements Initializable {
     }    
     
     @FXML
-    private void handleBtnCadastrar(ActionEvent event) throws IOException {
+    private void handleBtnCadastrar(ActionEvent event) throws IOException, ClassNotFoundException {
         try {
             
             UsuarioDTO objusuariodto = new UsuarioDTO();
@@ -83,7 +83,7 @@ public class CadastroController implements Initializable {
             objusuariodto.setEmail(txtEmail.getText());
             
             UsuarioDAO objusuariodao = new UsuarioDAO();
-            if (txtConfSenha.getText() == objusuariodto.getSenha_usuario()) {
+            //if (txtConfSenha.getText() == txtSenha.getText()) {
                 if(objusuariodao.cadastrarUsuario(objusuariodto)) {
                     Parent root = FXMLLoader.load(getClass().getResource("MeuConsumo.fxml"));        
                     Scene scene = new Scene(root);
@@ -93,7 +93,7 @@ public class CadastroController implements Initializable {
                     stage.show();
                     closeButtonAction(); 
                 }           
-            }            
+            //}            
         }
         catch(LoadException e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

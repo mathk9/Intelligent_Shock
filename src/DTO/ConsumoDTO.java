@@ -52,8 +52,5 @@ public class ConsumoDTO {
         this.potencia = potencia;
     }
     private Double tarifa, potencia;
-<<<<<<< HEAD
+    
 }
-=======
-}
->>>>>>> 79f6e751aae8ba078dca05f1268aba524d6af21c

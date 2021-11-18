@@ -20,11 +20,12 @@ import javafx.scene.control.ButtonType;
 
 public class ConexaoDAO {
     
-    public Connection conectaBD() {
+    public Connection conectaBD() throws ClassNotFoundException{
         Connection conn = null;
         
         try {
-            String url = "jdbc:mysql://localhost:3306/intelligent_shock?user=root&password=";
+            String url = "jdbc:mysql://localhost/intelligent_shock?user=root&password=";
+            Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url);
             
         } catch (SQLException erro) {

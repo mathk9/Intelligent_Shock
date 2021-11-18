@@ -83,6 +83,7 @@ public class MeuConsumoController implements Initializable {
         }
         catch(LoadException e) {
             e.printStackTrace();
+            System.out.println("AddTomada ERRO => "+e);
         }
     }
     

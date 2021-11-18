@@ -22,16 +22,18 @@ public class UsuarioDAO {
     
     Connection conn;
     
-    public ResultSet autenticacaoUsauario(UsuarioDTO objusuariodto) {
+    public ResultSet autenticacaoUsauario(UsuarioDTO objusuariodto) throws ClassNotFoundException{
         
         conn = new ConexaoDAO().conectaBD();
-        try {
+        try {            
             
             String sql = "SELECT * FROM Usuario WHERE NomeUsuario = ? AND Senha = ?";
             
+            String senha = HashFunctions.getHashInstance().getHash(objusuariodto.getSenha_usuario().getBytes(), "SHA-256");
+            
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, objusuariodto.getNome_usuario());
-            pstm.setString(2, objusuariodto.getSenha_usuario());
+            pstm.setString(2, senha);
             
             ResultSet rs = pstm.executeQuery();
             return rs;
@@ -53,17 +55,19 @@ public class UsuarioDAO {
         
     }  
     
-    public boolean cadastrarUsuario(UsuarioDTO objusuariodto) {
+    public boolean cadastrarUsuario(UsuarioDTO objusuariodto) throws ClassNotFoundException {
         
          conn = new ConexaoDAO().conectaBD();
          
          try {
             String sql = "INSERT INTO Usuario (NomeUsuario, Email, Senha) VALUES (?, ?, ?)";
             
+            String senha = HashFunctions.getHashInstance().getHash(objusuariodto.getSenha_usuario().getBytes(), "SHA-256");
+            
             PreparedStatement pstm = conn.prepareStatement(sql);
             pstm.setString(1, objusuariodto.getNome_usuario());
             pstm.setString(2, objusuariodto.getEmail());
-            pstm.setString(3, objusuariodto.getSenha_usuario());
+            pstm.setString(3, senha);
 
             
             pstm.execute();

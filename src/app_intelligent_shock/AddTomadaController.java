@@ -5,6 +5,8 @@
  */
 package app_intelligent_shock;
 
+import DAO.TomadaDAO;
+import DTO.TomadaDTO;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -17,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -28,10 +31,13 @@ import javafx.stage.StageStyle;
 public class AddTomadaController implements Initializable {
 
     @FXML
-    private Button btn_Close;
+    private Button btn_Close, btn_Minimaze;
     
     @FXML
-    private Button btn_Minimaze;
+    private Button btnCadastarTomada;
+    
+    @FXML
+    private TextField txtNomeTomada, txtLocalTomada;
     
     private Stage stage;
     /**
@@ -86,6 +92,35 @@ public class AddTomadaController implements Initializable {
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.show();
             closeButtonAction();
+        }
+        catch(LoadException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    private void handleBtnCadastarTomada(ActionEvent event) throws IOException, ClassNotFoundException {
+        try {
+            
+            TomadaDTO tomadadto = new TomadaDTO();
+            
+            tomadadto.setNomeTomada(txtNomeTomada.getText());
+            tomadadto.setLocalTomada(txtLocalTomada.getText());
+            
+            TomadaDAO tomadadao = new TomadaDAO();
+            
+            if(!txtNomeTomada.getText().isEmpty() && !txtLocalTomada.getText().isEmpty()){
+                if(tomadadao.cadastrarTomada(tomadadto)) {
+                    Parent root = FXMLLoader.load(getClass().getResource("MinhasTomadas.fxml"));        
+                    Scene scene = new Scene(root);
+                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.initStyle(StageStyle.TRANSPARENT);
+                    stage.show();
+                    closeButtonAction();
+                }
+            }            
+            
         }
         catch(LoadException e) {
             e.printStackTrace();

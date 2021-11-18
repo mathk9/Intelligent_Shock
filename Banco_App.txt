@@ -2,7 +2,7 @@ CREATE TABLE Usuario (
     IdUsuario INT AUTO_INCREMENT PRIMARY key,
     NomeUsuario VARCHAR(40),
     Email VARCHAR(40),
-    Senha VARCHAR(20)
+    Senha VARCHAR(25000)
 );
 
 CREATE TABLE Tomada (
